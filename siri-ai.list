@@ -1,0 +1,39 @@
+# siri ai分流规则
+# Source: user-provided image
+# 36 exact domain rules. Select the routing policy in Loon.
+DOMAIN,guzzoni.apple.com
+DOMAIN,smoot.apple.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,cp4.cloudflare.com
+DOMAIN,apple-relay.apple.com
+DOMAIN,api-siri-prod.apple.com
+DOMAIN,guzzoni-apple-com.v.aaplimg.com
+DOMAIN,guzzoni-smoot.v.aaplimg.com
+DOMAIN,apple-relay.akamaized.net
+DOMAIN,apple-relay.mask.apple-dns.net
+DOMAIN,gateway.icloud.com
+DOMAIN,mask-api.icloud.com
+DOMAIN,mask-h2.icloud.com
+DOMAIN,mask.icloud.com
+DOMAIN,mask-api.fe.apple-dns.net
+DOMAIN,mask-api.fe2.apple-dns.net
+DOMAIN,mask-t.apple-dns.net
+DOMAIN,mask.apple-dns.net
+DOMAIN,weatherkit.apple.com
+DOMAIN,weather-data.apple.com
+DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN,aapps.mzstatic.com
+DOMAIN,apps.mzstatic.com
+DOMAIN,apple-carry-relay.cloudflare.com
+DOMAIN,seed.siri.apple.com
+DOMAIN,probe.siri.apple.com
+DOMAIN,seed-sequoia.siri.apple.com
+DOMAIN,seed-swallow.siri.apple.com
+DOMAIN,probe.icloud.com
+DOMAIN,pong.icloud.com
+DOMAIN,metrics.icloud.com
+DOMAIN,mask-boot.icloud.com
+DOMAIN,mask-canary.icloud.com
+DOMAIN,doh.dns.apple.com
+DOMAIN,weather-data-origin.apple.com

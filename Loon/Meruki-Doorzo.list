@@ -1,23 +1,38 @@
-# 日淘任意门 / 挖煤姬（Meruki / Doorzo）直连规则
-# 来源：用户提供的 HAR 抓包 + 官方站点及 H5 页面公开资源域名核对
-# 仅收录 App/站点相关域名；不把代理订阅、GitHub、抓包工具等基础设施误设为直连。
+# 日淘任意门 / Doorzo 直连规则（Loon）
+# 订阅文件：Meruki-Doorzo.list
+# 来源：用户 HAR 抓包 + 日淘任意门官方 H5 页面公开请求记录
+# 用途：将 App API、商品图片、站点静态资源及相关客服请求设为 DIRECT
 
-# 核心 API 与站点
+# 一、App 核心 API / 官方站点
 DOMAIN-SUFFIX,meruki.cn,DIRECT
 DOMAIN-SUFFIX,mokaki.cn,DIRECT
 DOMAIN-SUFFIX,doorzo.cn,DIRECT
 DOMAIN-SUFFIX,doorzo.net,DIRECT
 
-# 商品图片与静态资源（HAR / H5 页面可见）
-DOMAIN,image.doorzo.net,DIRECT
-DOMAIN,pictures0.miraclebox.jp,DIRECT
-DOMAIN,cdn2.2ndstreet.jp,DIRECT
+# 二、HAR 中出现的商品来源及图片资源
+DOMAIN-SUFFIX,2ndstreet.jp,DIRECT
+DOMAIN-SUFFIX,suruga-ya.jp,DIRECT
+DOMAIN-SUFFIX,miraclebox.jp,DIRECT
+DOMAIN,matchingworld.asia,DIRECT
+DOMAIN,sig-image.oss-cn-beijing.aliyuncs.com,DIRECT
 
-# 客服 SDK（HAR 中实际出现）
+# 三、HAR 中出现的客服 SDK
 DOMAIN,visitor-sdk.meiqia.com,DIRECT
 DOMAIN,visitor-live-sdk.meiqia.com,DIRECT
 
-# 备注：
-# HAR 中 kelee.one、rule.kelee.one、dash.yfjc.xyz 属于代理/规则服务或其他非日淘业务域名，
-# github.com、raw.githubusercontent.com、gist.githubusercontent.com 属于 GitHub 资源，
-# 均未纳入本应用直连规则，避免影响现有代理配置。
+# 四、HAR 中其他出现的域名（不属于日淘任意门业务，故不启用直连）
+# kelee.one
+# rule.kelee.one
+# dash.yfjc.xyz
+# github.com
+# raw.githubusercontent.com
+# gist.githubusercontent.com
+
+# 说明：
+# 1. HAR 共 66 条请求，实际解析到 14 个不同主机名。
+# 2. img02.mokaki.cn、img03.mokaki.cn、img08.mokaki.cn、img17.mokaki.cn
+#    均由 DOMAIN-SUFFIX,mokaki.cn 覆盖。
+# 3. 官方 H5 页面公开请求还出现 image*.doorzo.net、imghk*.doorzo.net 等，
+#    由 DOMAIN-SUFFIX,doorzo.net 覆盖。
+# 4. 本规则不会把 kelee.one / GitHub 等抓包时同时出现的代理或工具域名设为直连，
+#    避免误改变用户原有代理订阅与规则更新流量。

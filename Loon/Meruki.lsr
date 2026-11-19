@@ -1,0 +1,26 @@
+# 日淘任意门（Meruki）及商品图片直连规则
+# 基于 2026-11-19 两次 HAR 抓包整理；图片/CDN 与应用接口均设为 DIRECT
+
+# App / API
+DOMAIN-SUFFIX,meruki.cn,DIRECT
+
+# Meruki 图片与静态资源
+DOMAIN-SUFFIX,mokaki.cn,DIRECT
+DOMAIN-SUFFIX,312588698.com,DIRECT
+
+# Doorzo / Yahoo Auctions 图片与页面
+DOMAIN-SUFFIX,doorzo.net,DIRECT
+DOMAIN-SUFFIX,doorzo.cn,DIRECT
+
+# 其他商品来源图片 CDN（本次抓包观察到）
+DOMAIN-SUFFIX,palcloset.jp,DIRECT
+DOMAIN-SUFFIX,yimg.jp,DIRECT
+DOMAIN,sig-image.oss-cn-beijing.aliyuncs.com,DIRECT
+DOMAIN-SUFFIX,minne.com,DIRECT
+DOMAIN,m.media-amazon.com,DIRECT
+DOMAIN-SUFFIX,0101.co.jp,DIRECT
+DOMAIN-SUFFIX,snkrdunk.com,DIRECT
+
+# 其他已观察到的业务域名
+DOMAIN-SUFFIX,binpom.com,DIRECT
+DOMAIN-SUFFIX,2ndstreet.jp,DIRECT

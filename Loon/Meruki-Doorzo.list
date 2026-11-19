@@ -1,0 +1,23 @@
+# 日淘任意门 / 挖煤姬（Meruki / Doorzo）直连规则
+# 来源：用户提供的 HAR 抓包 + 官方站点及 H5 页面公开资源域名核对
+# 仅收录 App/站点相关域名；不把代理订阅、GitHub、抓包工具等基础设施误设为直连。
+
+# 核心 API 与站点
+DOMAIN-SUFFIX,meruki.cn,DIRECT
+DOMAIN-SUFFIX,mokaki.cn,DIRECT
+DOMAIN-SUFFIX,doorzo.cn,DIRECT
+DOMAIN-SUFFIX,doorzo.net,DIRECT
+
+# 商品图片与静态资源（HAR / H5 页面可见）
+DOMAIN,image.doorzo.net,DIRECT
+DOMAIN,pictures0.miraclebox.jp,DIRECT
+DOMAIN,cdn2.2ndstreet.jp,DIRECT
+
+# 客服 SDK（HAR 中实际出现）
+DOMAIN,visitor-sdk.meiqia.com,DIRECT
+DOMAIN,visitor-live-sdk.meiqia.com,DIRECT
+
+# 备注：
+# HAR 中 kelee.one、rule.kelee.one、dash.yfjc.xyz 属于代理/规则服务或其他非日淘业务域名，
+# github.com、raw.githubusercontent.com、gist.githubusercontent.com 属于 GitHub 资源，
+# 均未纳入本应用直连规则，避免影响现有代理配置。
